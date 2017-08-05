@@ -71,24 +71,24 @@ opt = cmd:parse(arg)
 print(opt)
 
 opt.spatial = 0
-opt.temproal = 0
+opt.temporal = 0
 
 if opt.mode == 'cnn-rnn' then
     require 'models/cnn-rnn'
     opt.spatial = 0
-    opt.temproal = 0
+    opt.temporal = 0
 elseif opt.mode == 'spatial' then
     require 'models/cnn-rnn'
     opt.spatial = 1
-    opt.temproal = 0
+    opt.temporal = 0
 elseif opt.mode == 'temporal' then
     require 'models/spatial_temporal'
     opt.spatial = 0
-    opt.temproal = 1
+    opt.temporal = 1
 elseif opt.mode == 'spatial_temporal' then
     require 'models/spatial_temporal'
     opt.spatial = 1
-    opt.temproal = 1
+    opt.temporal = 1
 else
     print('Unknown mode')
     os.exit(0)
