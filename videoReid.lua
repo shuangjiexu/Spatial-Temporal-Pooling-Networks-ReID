@@ -65,7 +65,7 @@ cmd:option('-momentum',0.9)
 cmd:option('-nConvFilters',32)
 cmd:option('-embeddingSize',128)
 cmd:option('-hingeMargin',2)
-cmd:option('-mode','spatial_temproal','four mode: cnn-rnn, spatial, temporal, spatial_temporal')
+cmd:option('-mode','spatial_temporal','four mode: cnn-rnn, spatial, temporal, spatial_temporal')
 
 opt = cmd:parse(arg)
 print(opt)
@@ -82,11 +82,11 @@ elseif opt.mode == 'spatial' then
     opt.spatial = 1
     opt.temproal = 0
 elseif opt.mode == 'temporal' then
-    require 'models/spatial_temproal'
+    require 'models/spatial_temporal'
     opt.spatial = 0
     opt.temproal = 1
 elseif opt.mode == 'spatial_temporal' then
-    require 'models/spatial_temproal'
+    require 'models/spatial_temporal'
     opt.spatial = 1
     opt.temproal = 1
 else
