@@ -64,7 +64,7 @@ cmd:option('-learningRate',1e-3)
 cmd:option('-momentum',0.9)
 cmd:option('-nConvFilters',32)
 cmd:option('-embeddingSize',128)
-cmd:option('-hingeMargin',2)
+cmd:option('-hingeMargin',3)
 cmd:option('-mode','spatial_temporal','four mode: cnn-rnn, spatial, temporal, spatial_temporal')
 
 opt = cmd:parse(arg)
