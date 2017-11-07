@@ -182,7 +182,7 @@ function buildModel_MeanPool_RNN(opt, nFltrs1,nFltrs2,nFltrs3,nPersonsTrain)
 
     attention5 = nn.ParallelTable()
     attention5:add(nn.SelectTable(1))
-    attention5:add(nn.SelectTable(2))
+    attention5:add(nn.SelectTable(1))
     attention5:cuda()
 
     local attention = nn.Sequential()
